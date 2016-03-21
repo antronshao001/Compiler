@@ -1,4 +1,4 @@
-# Install script for directory: /home/anthony/DCE_HW/Hello
+# Install script for directory: /home/anthony/Compiler/myDCE/Hello
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

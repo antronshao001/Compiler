@@ -15,7 +15,9 @@ MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/None.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/PointerIntPair.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/PointerUnion.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/STLExtras.h
+MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/SetVector.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/SmallPtrSet.h
+MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/SmallSet.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/SmallVector.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/StringMap.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/ADT/StringRef.h
@@ -35,6 +37,7 @@ MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/DerivedTypes.
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/Function.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/GlobalObject.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/GlobalValue.h
+MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/InstIterator.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/Instruction.def
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/Instruction.h
 MyDCE/CMakeFiles/MyDCE.dir/MyDCE.cpp.o: /usr/local/include/llvm/IR/MetadataTracking.h

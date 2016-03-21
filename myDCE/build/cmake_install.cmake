@@ -1,4 +1,4 @@
-# Install script for directory: /home/anthony/DCE_HW
+# Install script for directory: /home/anthony/Compiler/myDCE
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/anthony/DCE_HW/build/Hello/cmake_install.cmake")
-  include("/home/anthony/DCE_HW/build/MyDCE/cmake_install.cmake")
+  include("/home/anthony/Compiler/myDCE/build/Hello/cmake_install.cmake")
+  include("/home/anthony/Compiler/myDCE/build/MyDCE/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/anthony/DCE_HW/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/anthony/Compiler/myDCE/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
