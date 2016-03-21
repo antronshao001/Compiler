@@ -6,17 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/anthony/DCE_HW/MyDCE/MyDCE.cpp
+/home/anthony/Compiler/myDCE/MyDCE/MyDCE.cpp
 MyDCE.h
-/home/anthony/DCE_HW/MyDCE/MyDCE.h
+/home/anthony/Compiler/myDCE/MyDCE/MyDCE.h
+llvm/IR/InstIterator.h
+/home/anthony/Compiler/myDCE/MyDCE/llvm/IR/InstIterator.h
+llvm/ADT/SetVector.h
+/home/anthony/Compiler/myDCE/MyDCE/llvm/ADT/SetVector.h
 
-/home/anthony/DCE_HW/MyDCE/MyDCE.h
+/home/anthony/Compiler/myDCE/MyDCE/MyDCE.h
 llvm/Pass.h
-/home/anthony/DCE_HW/MyDCE/llvm/Pass.h
+/home/anthony/Compiler/myDCE/MyDCE/llvm/Pass.h
 llvm/IR/Function.h
-/home/anthony/DCE_HW/MyDCE/llvm/IR/Function.h
+/home/anthony/Compiler/myDCE/MyDCE/llvm/IR/Function.h
 llvm/Support/raw_ostream.h
-/home/anthony/DCE_HW/MyDCE/llvm/Support/raw_ostream.h
+/home/anthony/Compiler/myDCE/MyDCE/llvm/Support/raw_ostream.h
 
 /usr/local/include/llvm-c/Core.h
 llvm-c/Support.h
@@ -138,6 +142,16 @@ memory
 utility
 -
 
+/usr/local/include/llvm/ADT/SetVector.h
+llvm/ADT/SmallSet.h
+/usr/local/include/llvm/ADT/llvm/ADT/SmallSet.h
+algorithm
+-
+cassert
+-
+vector
+-
+
 /usr/local/include/llvm/ADT/SmallPtrSet.h
 llvm/Support/Compiler.h
 /usr/local/include/llvm/ADT/llvm/Support/Compiler.h
@@ -154,6 +168,16 @@ cstring
 iterator
 -
 utility
+-
+
+/usr/local/include/llvm/ADT/SmallSet.h
+llvm/ADT/None.h
+/usr/local/include/llvm/ADT/llvm/ADT/None.h
+llvm/ADT/SmallPtrSet.h
+/usr/local/include/llvm/ADT/llvm/ADT/SmallPtrSet.h
+llvm/ADT/SmallVector.h
+/usr/local/include/llvm/ADT/llvm/ADT/SmallVector.h
+set
 -
 
 /usr/local/include/llvm/ADT/SmallVector.h
@@ -337,6 +361,12 @@ llvm/IR/DerivedTypes.h
 /usr/local/include/llvm/IR/llvm/IR/DerivedTypes.h
 system_error
 -
+
+/usr/local/include/llvm/IR/InstIterator.h
+llvm/IR/BasicBlock.h
+/usr/local/include/llvm/IR/llvm/IR/BasicBlock.h
+llvm/IR/Function.h
+/usr/local/include/llvm/IR/llvm/IR/Function.h
 
 /usr/local/include/llvm/IR/Instruction.def
 
