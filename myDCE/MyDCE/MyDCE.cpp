@@ -49,10 +49,18 @@ bool MyDCE::runOnFunction(Function &F) {
   for(std::map<Instruction*, int>::iterator it=instlist.begin();it!=instlist.end();++it)
   {
     if(it->second == 0){
-      it->first->eraseFromParent();
-      change = true;
+      it->first->dump();
+      worklist.insert(it->first);
     }
   }
+
+  while(!worklist.empty()){  
+    Instruction *delInst = worklist.pop_back_val();
+    delInst->dump();
+    delInst->eraseFromParent();
+    change = true;
+  }
+
   return change;
 }
 

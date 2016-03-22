@@ -1,4 +1,4 @@
-; ModuleID = 'a.c'
+; ModuleID = 'a.ll'
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -13,9 +13,7 @@ entry:
   store i32 1, i32* %k, align 4
   store i32 20, i32* %l, align 4
   %0 = load i32* %k, align 4
-  %add = add nsw i32 %0, 7
-  %1 = load i32* %k, align 4
-  %cmp = icmp sgt i32 %1, 3
+  %cmp = icmp sgt i32 %0, 3
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
@@ -26,19 +24,17 @@ if.end:                                           ; preds = %if.then, %entry
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc, %if.end
-  %2 = load i32* %i, align 4
-  %3 = load i32* %l, align 4
-  %cmp1 = icmp slt i32 %2, %3
+  %1 = load i32* %i, align 4
+  %2 = load i32* %l, align 4
+  %cmp1 = icmp slt i32 %1, %2
   br i1 %cmp1, label %for.body, label %for.end
 
 for.body:                                         ; preds = %for.cond
-  %4 = load i32* %k, align 4
-  %mul = mul nsw i32 %4, 2
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body
-  %5 = load i32* %i, align 4
-  %inc = add nsw i32 %5, 1
+  %3 = load i32* %i, align 4
+  %inc = add nsw i32 %3, 1
   store i32 %inc, i32* %i, align 4
   br label %for.cond
 
