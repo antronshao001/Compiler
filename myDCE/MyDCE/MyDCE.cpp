@@ -24,7 +24,7 @@ bool MyDCE::runOnFunction(Function &F) {
       instlist.insert(std::pair<Instruction*, int>(&*i, mark));
     }
   }
-  ploop(instlist);
+  // ploop(instlist);
 
 //loop in worklist to mark  
   while(!worklist.empty()){
@@ -33,7 +33,7 @@ bool MyDCE::runOnFunction(Function &F) {
        Value *OpV = checkInst->getOperand(i);
        if (Instruction *OpI = dyn_cast<Instruction>(OpV)){
          std::map<Instruction*, int>::iterator tempInst = instlist.find(OpI);
-         OpI->dump();
+         // OpI->dump();
          if(tempInst->second == 0){
            tempInst->second = 1;
            worklist.insert(OpI);
@@ -42,21 +42,21 @@ bool MyDCE::runOnFunction(Function &F) {
        }
     }
   }
-  ploop(instlist);
+  //ploop(instlist);
 
 //delete dead code
   bool change = false;
   for(std::map<Instruction*, int>::iterator it=instlist.begin();it!=instlist.end();++it)
   {
     if(it->second == 0){
-      it->first->dump();
+      // it->first->dump();
       worklist.insert(it->first);
     }
   }
 
   while(!worklist.empty()){  
     Instruction *delInst = worklist.pop_back_val();
-    delInst->dump();
+    // delInst->dump();
     delInst->eraseFromParent();
     change = true;
   }
