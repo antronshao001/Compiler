@@ -18,7 +18,6 @@ bool MyDCE::runOnFunction(Function &F) {
     for (auto i = BB.begin(); i != BB.end(); ++i) {
       int mark = 0;
       if(i->mayHaveSideEffects()||i->isTerminator()){  //check if Inst is critical
-          i->dump(); //instruction dump for debug
           mark=1;
           worklist.insert(&*i);  //save to worklist	
       }                 
@@ -30,17 +29,20 @@ bool MyDCE::runOnFunction(Function &F) {
 //loop in worklist to mark  
   while(!worklist.empty()){
     Instruction *checkInst = worklist.pop_back_val();  //
-    for(auto op = checkInst->op_begin(); op != checkInst->op_end(); ++op){
-      if(isa<Instruction>(op->get())){  //operand in checkInst is Inst
-        Instruction *useInst = static_cast<Instruction*>(op->get());
-        std::map<Instruction*, int>::iterator tempInst = instlist.find(useInst);
-        if(tempInst != instlist.end()){
-          tempInst->second = 1;
-          worklist.insert(useInst);
-        }
-      }
+    for(unsigned i = 0, e = checkInst->getNumOperands(); i != e; ++i){ 
+       Value *OpV = checkInst->getOperand(i);
+       if (Instruction *OpI = dyn_cast<Instruction>(OpV)){
+         std::map<Instruction*, int>::iterator tempInst = instlist.find(OpI);
+         OpI->dump();
+         if(tempInst->second == 0){
+           tempInst->second = 1;
+           worklist.insert(OpI);
+         }
+         
+       }
     }
   }
+  ploop(instlist);
 
 //delete dead code
   bool change = false;
