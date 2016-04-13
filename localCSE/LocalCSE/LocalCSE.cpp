@@ -65,7 +65,7 @@ bool change = false;  //any change in pass
       }
     }
   }
-plist(checkList);
+//plist(checkList);
 return change;
 }
 
@@ -74,14 +74,3 @@ void plist(SmallVector<Instruction*, 16> printList){
     (*printInst)->dump();
   }
 }
-
-// replace operand with repeated instruction
-// void replaceOp(Instruction* reinst, Instruction* inst, BasicBlock* BB){
-
-// for (auto i = BB.begin(); i != BB.end(); ++i) {
-//   for(unsigned k = 0, e = i->getNumOperands(); k!= e; ++k){
-//     Value *OpI = i->getOperand(k);
-//     OpI.replaceAllUsesWith();
-
-//   }
-// }
